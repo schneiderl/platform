@@ -1,24 +1,26 @@
 extends KinematicBody2D
 
-const FRICTION = 500
-const ACCELERATION = 600
-const MAX_SPEED = 140
+const UP = Vector2(0, -1)
+const GRAVITY = 20
+const SPEED = 200
+const JUMP_HEIGHT = -550
 
-var velocity = Vector2.ZERO
+
+var motion = Vector2()
 
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
-	map_inputs(delta)
-	move()
+func _physics_process(delta):
+	motion.y += GRAVITY
+	if Input.is_action_pressed("ui_right"):
+		motion.x = SPEED
+	elif Input.is_action_pressed("ui_left"):
+		motion.x = -SPEED
+	else:
+		motion.x = 0
 	
-func map_inputs(delta):
-	var input_vector = Vector2.ZERO
-	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	input_vector = input_vector.normalized()
-	velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
-
-func move():
-	velocity = move_and_slide(velocity)
+	if is_on_floor():
+		if Input.is_action_pressed("ui_up"):
+			motion.y = JUMP_HEIGHT
+	motion = move_and_slide(motion, UP)
