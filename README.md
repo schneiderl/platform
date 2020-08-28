@@ -5,7 +5,7 @@ This does not actually intent to be a playable game (or at least not a fun one).
 
 
 # features
-- [ ] 2D playable character
+- [X] 2D playable character
 - [ ] Physics applied to the character
 - [ ] Initial tiled platform (or level) with proper collisions between character/world
 - [ ] Some kind of "enemy" (whereas we would implement hurt and hitboxes)
