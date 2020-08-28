@@ -1,8 +1,71 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/StaticBody.tscn" type="PackedScene" id=2]
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 141.271, 76.5216 )
+position = Vector2( 24, 296 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="PlatformTileScene" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 16, 344 )
+
+[node name="PlatformTileScene2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 112, 344 )
+
+[node name="PlatformTileScene3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 144, 344 )
+
+[node name="PlatformTileScene4" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 176, 344 )
+
+[node name="PlatformTileScene5" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 208, 344 )
+
+[node name="PlatformTileScene6" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 240, 344 )
+
+[node name="PlatformTileScene7" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 272, 344 )
+
+[node name="PlatformTileScene8" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 368, 344 )
+
+[node name="PlatformTileScene9" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 400, 344 )
+
+[node name="PlatformTileScene10" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 432, 344 )
+
+[node name="PlatformTileScene11" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 464, 344 )
+
+[node name="PlatformTileScene12" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 496, 344 )
+
+[node name="PlatformTileScene13" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 48, 344 )
+
+[node name="PlatformTileScene14" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 80, 344 )
+
+[node name="PlatformTileScene15" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 304, 344 )
+
+[node name="PlatformTileScene16" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 336, 344 )
+
+[node name="PlatformTileScene17" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 528, 344 )
+
+[node name="PlatformTileScene18" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 560, 344 )
+
+[node name="PlatformTileScene19" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 592, 344 )
+
+[node name="PlatformTileScene20" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 624, 344 )
