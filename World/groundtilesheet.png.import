@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform_tile.png-ed6d3c190a163357f73f2b0ebda578f6.stex"
+path="res://.import/groundtilesheet.png-2ac2be61a4dc8ed66dad028996491eec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/platform_tile.png"
-dest_files=[ "res://.import/platform_tile.png-ed6d3c190a163357f73f2b0ebda578f6.stex" ]
+source_file="res://World/groundtilesheet.png"
+dest_files=[ "res://.import/groundtilesheet.png-2ac2be61a4dc8ed66dad028996491eec.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
