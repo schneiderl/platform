@@ -24,3 +24,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("ui_up"):
 			motion.y = JUMP_HEIGHT
 	motion = move_and_slide(motion, UP)
+
+func _on_StaticBody2D_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene("res://World/World2.tscn")
