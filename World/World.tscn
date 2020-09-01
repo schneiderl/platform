@@ -4,10 +4,10 @@
 [ext_resource path="res://World/GroundTileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/groundtilesheet.png" type="Texture" id=3]
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
-[sub_resource type="TileSet" id=4]
+[sub_resource type="TileSet" id=2]
 resource_local_to_scene = true
 0/name = "groundtilesheet.png 0"
 0/texture = ExtResource( 3 )
@@ -19,33 +19,34 @@ resource_local_to_scene = true
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 3 )
+0/shape = SubResource( 1 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 8, 8 )
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 0, 8 )
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 48, 304 )
+position = Vector2( 24, 128 )
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
-tile_set = SubResource( 4 )
-tile_data = PoolIntArray( 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0 )
+tile_set = SubResource( 2 )
+tile_data = PoolIntArray( 1376256, 0, 0, 1376258, 0, 0, 1376260, 0, 0, 1376262, 0, 0, 1376264, 0, 0, 1376266, 0, 0, 1376268, 0, 0, 1376270, 0, 0, 1376272, 0, 0, 1376274, 0, 0, 1376276, 0, 0, 1376278, 0, 0, 1376280, 0, 0, 1376282, 0, 0, 1376284, 0, 0, 1376286, 0, 0, 1376288, 0, 0, 1376290, 0, 0, 1376292, 0, 0, 1376294, 0, 0 )
 
 [node name="StaticBody2D" type="Area2D" parent="."]
-position = Vector2( 632, 304 )
+position = Vector2( 632, 312 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource( 5 )
+position = Vector2( 0, 8 )
+shape = SubResource( 3 )
 [connection signal="body_entered" from="StaticBody2D" to="Player" method="_on_StaticBody2D_body_entered"]
